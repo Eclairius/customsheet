@@ -1,0 +1,176 @@
+.sheet-WholeSheet {
+ background-color: #754e07;	
+ color: #e8bc6a;
+ border: 1px solid #e8bc6a;
+ height: 100%;
+ width: 100%;
+}
+
+.sheet-data-div {
+     display: inline-grid;
+     grid-template-columns: auto auto;
+}
+
+.sheet-tab-field {
+ border: 1px solid #e8bc6a;
+   background-color: #754e07;	
+ color: #e8bc6a;
+ border: 1px solid #e8bc6a;
+  height: auto;
+  width: auto;
+}
+
+.sheet-repeat{
+	position:relative;
+}
+
+input[type=radio].sheet-tab-button {
+	opacity: 0;
+	position: absolute;
+	width: 60px;
+	height: 18px;
+}
+
+input[type=radio].sheet-tab-button:checked + span {
+    color: #ffb200;
+	background-color: #ab7b20;
+}
+
+.sheet-tab-field {
+	display:none;
+	height: auto;
+    width: auto;
+}
+
+input[type=radio].sheet-tab-button.sheet-stats:checked + span ~ .sheet-tab-field.sheet-stats,
+input[type=radio].sheet-tab-button.sheet-bio:checked + span ~ .sheet-tab-field.sheet-bio,
+input[type=radio].sheet-tab-button.sheet-inv:checked + span  ~ .sheet-tab-field.sheet-inv,
+input[type=radio].sheet-tab-button.sheet-action:checked + span  ~ .sheet-tab-field.sheet-action,
+input[type=radio].sheet-tab-button.sheet-effet:checked + span  ~ .sheet-tab-fieldsheet-effet,
+input[type=radio].sheet-tab-button.sheet-option:checked + span  ~ .sheet-tab-field.sheet-option {
+	display:block;
+}
+
+.sheet-cinput{
+ background-color:lightblue;
+ border:0px;
+}
+
+.sheet-weapon-div{
+     display: inline-grid;
+     grid-template-columns: 150px 150px 150px;
+     grid-template-rows: auto auto auto;
+}
+
+input[type=checkbox].sheet-hidecheck,
+input[type=checkbox].sheet-equipcheck{
+	opacity: 0;
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	top: -3px;
+	right: 8px;
+	z-index:2;	
+}
+
+.sheet-hidecheckimg{
+	position: absolute;
+	top: 0px;
+	right: 10px;
+}
+
+input[type=checkbox].sheet-hidecheck:checked ~ .sheet-hidecheckimg{
+	opacity:0.5;
+}
+
+input[type=checkbox].sheet-effectswitch{
+    opacity: 0;
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	top: -3px;
+	right: 87px;
+	z-index:2;
+}
+
+.sheet-effectswitchimg{
+ 	position: absolute;
+	top: 0px;
+	right: 90px;
+}
+
+input[type=checkbox].sheet-effectswitch:not(:checked) ~ .sheet-effectswitchimg{
+    opacity:0.5;
+}
+
+input[type=checkbox].sheet-hidecheck:not(:checked) ~ .sheet-row,
+ input[type=checkbox].sheet-hidecheck:not(:checked) ~ textarea{
+	display:none;
+}
+
+.sheet-stat-div {
+     display: grid;
+     grid-template-columns: 100px 100px 100px 100px 100px 100px;
+     grid-template-rows: auto auto;
+}
+
+.sheet-stat-div-span{
+	 position:relative;
+	 height: 50px;
+	 width: 100px;	
+}
+.sheet-stat-div-name{
+     text-align: center;
+     position: absolute;
+	 top: 25%;
+	 left: 0;
+}
+.sheet-stat-div-label{
+     text-align: center;
+}
+
+.sheet-stat-div-input{
+	 position: absolute;
+	 top: 25%;
+	 left: 0;
+     text-align: center;
+     height: 15px;
+     width: 100px;
+}
+
+.sheet-weapon-description{
+     grid-column: 1/span 2;
+     grid-row: 3;
+}
+
+.sheet-action-div{
+     display: inline-grid;
+     grid-template-columns: auto auto auto;
+     grid-template-rows: auto auto;
+}
+
+.sheet-action-script{
+     grid-column: 3/3;
+     grid-row: 1/2;
+}
+
+.sheet-lore-div{
+	 display: grid;
+     grid-template-columns: auto auto;
+     grid-template-rows: auto auto;
+}
+
+ .sheet-lore-text{
+  width:80%;
+  height:300px;
+}
+
+.sheet-lore-block{
+	 width: 100%;
+}
+
+.sheet-lore-block-bio{
+	 width: 100%;
+	 grid-column: 1 / span 2;
+     grid-row: 2;
+}
