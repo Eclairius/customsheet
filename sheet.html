@@ -1,0 +1,221 @@
+# customsheet
+<div class="WholeSheet">
+ <!-- Entête -->
+  <div class="data-div">
+   <span>Nom:</span>
+   <input type="text" name="attr_character_name"/>
+   <span>Alias:</span>
+   <input type="text" name="attr_alias"/>
+   <span>Classification:</span>
+   <input type="text" name="attr_classification"/>
+  </div>
+  <br>
+   <input type="radio" class="tab-button stats" name="attr_tab" checked/><span>STATS</span>
+   <input type="radio" class="tab-button bio" name="attr_tab"/><span>BIO</span>
+   <input type="radio" class="tab-button inv" name="attr_tab"/><span>INV</span>
+   <input type="radio" class="tab-button action" name="attr_tab"/><span>ACTION</span>
+   <input type="radio" class="tab-button effet" name="attr_tab"/><span>EFFET</span>
+   <input type="radio" class="tab-button option" name="attr_tab"/><span>OPTION</span>
+  <br>
+<!-- Onglet stats -->
+  <fieldset class="tab-field stats">
+ <!-- Stats ressources -->
+   <div> <p class="section-name"> Etat </p>
+    <span class="ressource-div">Vie
+     <input type="text" class="" name="attr_hp"/>/<input type="text" class=""/>
+    </span>
+    <span class="ressource-div">Od
+     <input type="text" class="" name="attr_mp"/>/<input type="text" class=""/>
+    </span>
+	<br>
+	<span class="ressource-div">Fatigue
+     <input type="text" class="" name="attr_tr"/>
+    </span>
+	<span class="ressource-div"> Efficacitée
+     <input type="text" class="" name="attr_eff"/>%
+    </span>
+	<br>
+	<span class="ressource-div"> Protection
+     <input type="text" class="" name="attr_pr"/>
+    </span>
+	<span class="ressource-div"> Couverture
+     <input type="text" class="" name="attr_cov"/>%
+    </span>
+   </div>
+   	<input class="cinput" type="text" name="attr_c-hp" value="[[@{o-hp}]]" disabled="true"/>
+	<input class="cinput" type="text" name="attr_c-mp" value="[[@{o-mp}]]" disabled="true"/>
+	<input class="cinput" type="text" name="attr_c-tr" value="[[@{o-tr}]]" disabled="true"/>
+	<input class="cinput" type="text" name="attr_c-eff" value="[[@{o-eff}]]" disabled="true"/>
+ <!-- Stats principales -->
+   <div> <p class="section-name"> Statistiques principales </p>
+    <div class="stat-div">
+     <span> </span>
+     <span class="stat-div-label">Naturelle</span>
+     <span class="stat-div-label">Multiplieur</span>
+     <span class="stat-div-label">Altération</span>
+     <span class="stat-div-label">Total</span>
+     <span> </span>
+     <span class="stat-div-span"><span class="stat-div-name">Forc ee e zvffffed</span></span>
+     <span class="stat-div-span"><input class="stat-div-input" type="text" name="attr_nat-str"/></span>
+     <span class="stat-div-span"><input class="stat-div-input" type="text" name="attr_mlt-str"/></span>
+     <span class="stat-div-span"><input class="stat-div-input" type="text" name="attr_alt-str"/></span>
+     <span class="stat-div-span"><input class="stat-div-input" type="text" name="attr_str"/></span>
+     <span class="stat-div-rank"> </span>
+    </div>
+	<input class="cinput" type="text" name="attr_c-nat-str" value="[[@{o-str}]]" disabled="true">
+   </div>
+ <!-- hr -->
+   <hr>
+ <!-- Stats secondaires -->
+   <div> <p class="section-name"> Statistiques secondaires </p>
+    <div class="stat-div">
+     <span> </span>
+     <span class="stat-div-label">Naturelle</span>
+     <span class="stat-div-label">Multiplieur</span>
+     <span class="stat-div-label">Altération</span>
+     <span class="stat-div-label">Total</span>
+     <span> </span>
+     <span class="stat-div-span"><span class="stat-div-name">Vitesse</span></span>
+     <span class="stat-div-span"><input class="stat-div-input" type="text" name="attr_nat-spd"/></span>
+     <span class="stat-div-span"><input class="stat-div-input" type="text" name="attr_mlt-spd"/></span>
+     <span class="stat-div-span"><input class="stat-div-input" type="text" name="attr_alt-spd"/></span>
+     <span class="stat-div-span"><input class="stat-div-input" type="text" name="attr_spd"/></span>
+     <span class="stat-div-rank"> </span>
+    </div>
+    <input class="cinput" type="number" name="attr_c-nat-spd" value="[[1*@{o-spd}]]" disabled="true"/>
+   </div>
+  </fieldset>
+  <!-- Onglet bio -->
+  <fieldset class="tab-field bio"> <p> Informations personnelles </p>
+  <p> Carrure </p>
+  <input class="" type="text" placeholder="taille"/> m 
+  <input class="" type="text" placeholder="poids"/> kg
+   <div class="lore-div"> 
+    <div class="lore-block"> <p>Personnalité</p>
+    <textarea class="lore-text" name="lore-personnality"></textarea></div>
+    <div class="lore-block"> <p>Apparance</p>
+    <textarea class="lore-text" name="lore-appearance"></textarea></div>
+    <div class="lore-block-bio"> <p>Biographie</p>
+    <textarea class="lore-text" name="lore-bio"></textarea></div>
+   </div>
+  </fieldset>
+  <!-- Onglet iventaire -->
+  <fieldset class="tab-field inv"> 
+   <!-- Armes -->
+   <div class="section-name"> <p>Section name</p>
+    <fieldset class="repeating_weapon repeat">          	
+     <input type="text" name="attr_weapon-name" placeholder="Nom"/>
+     <input type="button" value="Equiper sur la main principale"/>
+     <input type="button" value="Equiper sur la main secondaire"/>
+	 <input type="checkbox" class="hidecheck"/>
+	 <img class="hidecheckimg" src="Infinity_gear.png" height="40" width="40"/>
+	 <br>
+     <div class="weapon-div row">
+      <div><p>Poids</p><input type="text" name="attr_weapon-weight"/></div>       
+      <div><p>Taille de frappe</p><input type="text" name="attr_weapon-strike-width"/></div>
+      <div><p>Puissance</p><input type="text" name="attr_weapon-power"/></div>
+      <div><p>Dégâts</p><input type="text" name="attr_weapon-damage"/></div>
+      <div><p>
+       <input type="text" name="attr_weapon-customstatname-1" Placeholder="variable 1"/></p>
+       <input type="text" name="attr_weapon-customstat-1"/></div>
+      <div><p>
+       <input type="text" name="attr_weapon-customstatname-2" placeholder="variable 2"/></p>
+       <input type="text" name="attr_weapon-customstat-2"/></div>
+      <div class="weapon-description"><p>Note</p><textarea name="attr_weapon-note"></textarea></div>
+      <div>Equiper depuis l'inventaire?<input type="checkbox" name="attr_weapon-form-inventory"/></div>
+	 </div>
+	 <br>
+    </fieldset>
+   </div>
+   <!-- Possessions -->
+   <p>Possessions</p>
+   <fieldset class="repeating_inventory repeat">
+    <div class="inventory-row">
+	 <input type="text" placeholder="Nom"/>
+     <span><input type="text"placeholder="Poids"/>kg</span>
+	 <input type="checkbox" class="hidecheck"/>
+	 <img class="hidecheckimg" src="Infinity_gear.png" height="40" width="40"/>
+	 <br>
+	 <textarea></textarea>
+    </div>
+   </fieldset>
+     <div>
+   <!-- Onglet protections -->
+   <p>Protections</p>
+   <fieldset class="repeating_inventory repeat">
+    <div class="">
+	 <input type="text" placeholder="Nom"/>
+     <input type="text"placeholder="Protection"/>
+	 <input type="checkbox" class="equipcheck"/><span></span>
+	 <input type="checkbox" class="hidecheck"/>
+	 <img class="hidecheckimg" src="Infinity_gear.png" height="40" width="40"/>
+	 <br>
+	 <textarea></textarea>
+    </div>
+   </fieldset>
+  </fieldset>
+  <!-- Onglet action-->
+  <fieldset class="tab-field action"> 
+   <div class="section-name"> Section name
+    <fieldset class="repeating_weapon repeat">            
+     <input type="text" name="attr_action-name" placeholder="Nom"/>
+	 <input type="button" Value="Utiliser"/>
+	 <input type="checkbox" class="hidecheck"/>
+	 <img class="hidecheckimg" src="Infinity_gear.png" height="40" width="40"/>
+	 <br>
+     <div  class="action-div row">
+      <div><p>
+	   <input type="text" name="attr_action-customstatname-1" placeholder="Variable 1"/></p>
+	   <input type="text" name="attr_action-customstat-1" /></div>
+      <div>
+	   <p><input type="text" name="attr_action-customstatname-2" placeholder="Variable 2"/></p>
+	   <input type="text" name="attr_action-customstat-1" /></div>
+      <div class="action-script"><p>Script de l'action</p><textarea type="text" name="attr_actionscript"></textarea></div>
+      <div><p>Description</p><textarea type="text" name="attr_actionnote"></textarea></div>
+      <div><p>Description bis</p><textarea type="text" name="attr_actionhiddennote" /></textarea></div>
+     </div>
+     <br>
+    </fieldset>
+   </div>
+  </fieldset>
+  <!-- Onglet passifs -->
+  <fieldset class="tab-field effet"> <p> Effets passifs </p>
+   <fieldset class="repeating_passive repeat">
+    <input type="text" placeholder="Nom"/>
+	<input type="checkbox" class="effectswitch" checked/>
+	<img src="Homunculus_baby.png" class="effectswitchimg" height="40" width="40"/>
+	<input type="checkbox" class="hidecheck"/>
+	<img class="hidecheckimg" src="Infinity_gear.png" height="40" width="40"/>
+	<br>
+	<div class="row">
+	 <textarea></textarea></p>
+	 <fieldset>
+	  <input type="text" placeholder="Attribut"/>
+	  <select>
+       <option value="mult">Multiplicateur</option>
+       <option value="alt">Altération</option>
+      </select>
+	  <input type="text" placeholder="Valeur"/>
+	 </fieldset>
+	</div>
+	<br>
+   </fieldset>
+  </fieldset>
+ <!-- Onglet option -->
+  <fieldset class="tab-field option">
+   <p>Equation de stats</p>
+   <p>Vie max<input type="text" name="attr_o-hp"/></p>
+   <p>Od max<input type="text" name="attr_o-mp"/></p>
+   <p>Efficacité<input type="text" name="attr_o-eff"/></p>
+   <p>Force<input type="text" name="attr_o-str"/></p>
+   <p>Agilité<input type="text" name="attr_o-agi"/></p>
+   <p>Endurance<input type="text" name="attr_o-end"/></p>
+   <p>Puissance magique<input type="text" name="attr_o-mag"/></p>
+   <p>Vitesse<input type="text" name="attr_o-spd"/></p>
+   <p>Longueur de saut<input type="text" name="attr_o-jmp"/></p>
+   <p>Vitesse d'incantation<input type="text" name="attr_o-cht"/></p>
+  </fieldset>
+ <!-- fin onglets -->
+ </div>
+ <script type="text/worker">
+ </script>
